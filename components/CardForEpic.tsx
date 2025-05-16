@@ -23,9 +23,13 @@ const RootChild = styled("div")(({ theme }) => ({
     width: "100%",
     marginBottom: "10px",
   },
+  [theme.breakpoints.up("sm")]: {
+    width: "40%",
+    marginLeft: "5%",
+  },
   [theme.breakpoints.up("md")]: {
-    width: "25%",
-    marginLeft: "4.5%",
+    width: "30%",
+    marginLeft: "2%",
   },
   [theme.breakpoints.up("lg")]: {
     width: "20%",
@@ -73,6 +77,7 @@ const CardForEpic: FC<EpicCardProps> = ({ dataEpic }) => {
             justifyContent: "flex-start",
             flexWrap: "wrap",
             width: "100%",
+            marginTop: "10px"
           }}
         >
           {coordinats.map((el) => {
@@ -84,8 +89,8 @@ const CardForEpic: FC<EpicCardProps> = ({ dataEpic }) => {
                   padding: "5px",
                   border: "1px solid blue",
                   borderRadius: "5px",
-                  width: "250px",
                   marginBottom: "10px",
+                  boxSizing: "border-box"
                 }}
                 key={el}
               >
